@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="container mt-5 w-auto">
+
+        <h3 class="text-center mb-3"> Simple<span class="text-warning font-weight-bolder"> Weight
+            </span>Converter</h3>
+        <div class="card">
+            <div class="card-body">
+                <form action="">
+                    <div class="form-group">
+                        <label for=""></label>
+                        <input type="number" min="0" value="0" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-warning">Enter Weight</small>
+                    </div>
+                </form>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h4>Grams</h4>
+                        <p class="gms"></p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>Kilos</h4>
+                        <p class="kgs"></p>
+                    </li>
+                    <li class="list-group-item">
+                        <h4>Tonnes</h4>
+                        <p class="tonnes"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script>
+        document.querySelector('input').addEventListener('input', e => {
+            const val = e.target.value;
+            // $('ul').show();
+            document.querySelector('.gms').innerHTML = val * 1000 + ' gms';
+            document.querySelector('.kgs').innerHTML = val + 0 + ' kgs';
+            document.querySelector('.tonnes').innerHTML = val / 5 + ' tonnes';
+            // console.log(last);
+        })
+    </script>
+</body>
+
+</html>
